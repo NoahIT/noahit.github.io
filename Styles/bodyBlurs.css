@@ -1,0 +1,19 @@
+.blue-blurs, .red-blurs,
+.orange-blurs, .green-blurs{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    position: absolute;
+    z-index: -1;
+    width: 800px;
+    top: -190px;
+    opacity: 0;
+    transition: 0.5s all ease-in-out;
+}
+
+.blur-img, .red-img,
+.orange-img, .green-img{
+    filter: blur(120px);
+    rotate: 60deg;
+}
+

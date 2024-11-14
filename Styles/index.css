@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jersey+25&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Nothing+You+Could+Do&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jersey+25&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Nothing+You+Could+Do&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.main-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0;
+    width: 1000px;
+    gap: 50px;
+    position: relative;
+    z-index: 10;
+}
+
+.card {
+    width: 200px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.2s all ease-in-out;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.card:hover {
+    display: flex;
+    filter: none;
+    cursor: pointer;
+}
+
+.card:not(:hover) {
+    filter: blur(10px);
+}
+
+.card-img{
+    width: 200px;
+    height: 380px;
+    opacity: 0.75;
+    border: 2px solid #333333;
+    transition: 0.2s all ease-in-out;
+    border-radius: 15px;
+}
+
+.card:hover .card-img{
+    padding: 2px;
+}
+
+.card:hover #projectsImg{
+    background-color: rgb(71, 164, 247);
+}
+
+.card:hover #journeyImg{
+    background-color: rgb(247, 97, 71);
+}
+
+.card:hover #aboutMeImg{
+    background-color: rgb(248, 168, 47);
+}
+
+.card:hover #experienceImg{
+    background-color: rgb(56, 248, 88);
+}
+
+.hover-decoration{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 16px;
+    z-index: 10;
+    rotate: -30deg;
+    left: -50px;
+    transition: 0.2s all ease-in-out;
+}
+
+.hover-decoration h3{
+    color: #d9d9d9;
+    font-family: "Nothing You Could Do", cursive;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.2rem;
+    rotate: -10deg;
+}
+
+.curved-arrow{
+    width: 40px;
+    height: auto;
+    rotate: 65deg;
+}
+
+.card-heading{
+    font-family: "Doto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-align: center;
+    background-clip: text;
+    font-size: 1.6rem;
+    color: aliceblue;
+    padding: 5px 0;
+    max-width: 200px;
+    margin: 0;
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transform: translateY(0);
+}
+
+.card:hover .card-heading {
+    opacity: 1;
+    transform: translateY(100%);
+}

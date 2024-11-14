@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jersey+25&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Nothing+You+Could+Do&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    width: 1000px;
+    border-bottom: 2px solid #bfbfbf;
+}
+
+.navbar a, footer{
+    text-decoration: none;
+    color: #d9d9d9;
+    font-family: "Nothing You Could Do", cursive;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.1rem;
+}
+
+footer{
+    font-size: 0.9rem;
+}
+
+.navbar-nav {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    width: 350px;
+}
