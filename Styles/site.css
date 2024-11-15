@@ -6,6 +6,8 @@ body {
     align-items: center;
     flex-direction: column;
     background-color: black;
+    overflow: hidden;
+    transition: 0.3s all ease-in-out;
 }
 
 .navbar {
@@ -24,6 +26,12 @@ body {
     font-weight: 600;
     font-style: normal;
     font-size: 1.1rem;
+    transition: 0.2s all ease-in-out;
+}
+
+.navbar a:hover {
+    text-shadow: 10px 0 5px darkgray;
+    padding: 2px;
 }
 
 footer{

@@ -11,6 +11,7 @@ cards.forEach(card => {
         if (validColors.includes(color)) {
             hoverDecoration.style.opacity = '0';
             blurDiv.style.opacity = '1';
+            Body.style.background =""
         }
     });
 
@@ -21,3 +22,26 @@ cards.forEach(card => {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.card');
+    const body = document.body;
+  
+    const colorMap = {
+      blueCard: '#001933',
+      redCard: '#330000',
+      orangeCard: '#331400',
+      greenCard: '#003300'
+    };
+  
+    cards.forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        const cardColor = colorMap[card.id] || '';
+        body.style.backgroundColor = cardColor;
+      });
+  
+      card.addEventListener('mouseleave', () => {
+        body.style.backgroundColor = '';
+      });
+    });
+  });

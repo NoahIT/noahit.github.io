@@ -5,15 +5,104 @@
     align-items: center;
     position: absolute;
     z-index: -1;
-    width: 800px;
-    top: -190px;
+    width: 100vw;
+    height: 100vh;
+    gap: 50px;
+    top: -100px;
     opacity: 0;
     transition: 0.5s all ease-in-out;
 }
 
 .blur-img, .red-img,
 .orange-img, .green-img{
-    filter: blur(120px);
+    filter: blur(80px);
     rotate: 60deg;
 }
 
+#BlueBlur1, #BlueBlur2, #BlueBlur3, #BlueBlur4,
+#RedBlur1, #RedBlur2, #RedBlur3, #RedBlur4,
+#OrangeBlur1, #OrangeBlur2, #OrangeBlur3, #OrangeBlur4
+#GreenBlur1, #GreenBlur2, #GreenBlur3, #GreenBlur4{
+    position: absolute;
+    padding: 10px;
+}
+
+#BlueBlur1{
+    top: 200px;
+    left: 380px;
+}
+
+#BlueBlur2{
+    bottom: -50px;
+    right: 20px;
+}
+
+#BlueBlur3{
+    bottom: 80px;
+    left: 20px;
+}
+
+#BlueBlur4{
+    top: 60px;
+    right: 230px;
+}
+
+#RedBlur1{
+    top: 200px;
+    left: 0;
+}
+
+#RedBlur2{
+    bottom: -50px;
+    right: 220px;
+}
+
+#RedBlur3{
+    bottom: 80px;
+    left: 320px;
+}
+
+#RedBlur4{
+    top: 60px;
+    right: -30px;
+}
+
+#OrangeBlur1{
+    top: 200px;
+    left: 380px;
+}
+
+#OrangeBlur2{
+    bottom: -50px;
+    right: 20px;
+}
+
+#OrangeBlur3{
+    bottom: 80px;
+    left: 20px;
+}
+
+#OrangeBlur4{
+    top: 60px;
+    right: 230px;
+}
+
+#GreenBlur1{
+    top: 60px;
+    right: 230px;
+}
+
+#GreenBlur2{
+    top: 200px;
+    left: 0;
+}
+
+#GreenBlur3{
+    bottom: -50px;
+    right: 220px;
+}
+
+#GreenBlur4{
+    bottom: 80px;
+    left: 320px;
+}
