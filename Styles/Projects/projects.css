@@ -123,6 +123,10 @@
     text-align: right;
 }
 
+.project-img-container{
+    transition: 0.2s all ease-in-out;
+}
+
 .project-info-container h3{
     font-size: 1rem;
     text-align: left;
@@ -141,7 +145,7 @@
     background-color: black;
 }
 
-.project-images:hover{
+.project-img-container:hover{
     opacity: 0.5;
     cursor: pointer;
 }

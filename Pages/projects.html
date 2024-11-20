@@ -20,10 +20,54 @@
         body {
             overflow: auto;
         }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .animate-on-scroll.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .main-content>* {
+            animation: fadeInUp 0.6s ease-out;
+            animation-fill-mode: both;
+        }
+
+        .main-content>*:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .main-content>*:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .main-content>*:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .main-content>*:nth-child(4) {
+            animation-delay: 0.8s;
+        }
     </style>
     <!-- <div class="blue-blurs" id="blueBlurs"> -->
     <nav class="navbar">
-        <a class="navbar-brand" href="/">Nojus Rascius</a>
+        <a class="navbar-brand" href="/">Nojus Raščius</a>
         <div>
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -44,16 +88,19 @@
         <h1 class="projects-heading">Real commercial projects I worked on</h1>
 
         <div class="project-container">
-            <div class="project-img-container">
-                <div class="project-images">
-                    <img class="active" src="/Images/ProjectImages/EK/EuroKatilaiWeb (1).png"
-                        alt="Euro Katilai Web 1" />
-                    <img src="/Images/ProjectImages/EK/EuroKatilaiWeb (2).png" alt="Euro Katilai Web 2" />
-                    <img src="/Images/ProjectImages/EK/EuroKatilaiWeb (3).png" alt="Euro Katilai Web 3" />
-                    <img src="/Images/ProjectImages/EK/EuroKatilaiWeb (4).png" alt="Euro Katilai Web 4" />
+            <a href="https://github.com/NoahIT/E-CommerceShopProject">
+                <div class="project-img-container">
+                    <div class="project-images">
+                        <img class="active" src="/Images/ProjectImages/EK/EuroKatilaiWeb (1).png"
+                            alt="Euro Katilai Web 1" />
+                        <img src="/Images/ProjectImages/EK/EuroKatilaiWeb (2).png" alt="Euro Katilai Web 2" />
+                        <img src="/Images/ProjectImages/EK/EuroKatilaiWeb (3).png" alt="Euro Katilai Web 3" />
+                        <img src="/Images/ProjectImages/EK/EuroKatilaiWeb (4).png" alt="Euro Katilai Web 4" />
+                    </div>
+                    <div class="dots-container"></div>
                 </div>
-                <div class="dots-container"></div>
-            </div>
+            </a>
+
 
             <div class="project-info-container">
                 <a class="project-link" href="https://github.com/NoahIT/E-CommerceShopProject">
@@ -62,23 +109,26 @@
                 <h1>EuroKatilai</h1>
                 <div>
                     <h2 class="project-tag">First real commercial project</h2>
-                    <h3>Developed a responsive, user-friendly front-end for an e-commerce platform selling 
+                    <h3>Developed a responsive, user-friendly front-end for an e-commerce platform selling
                         heating equipment, focusing on seamless navigation and optimized performance.</h3>
                 </div>
             </div>
         </div>
 
         <div class="project-container flex-reverse-display">
-            <div class="project-img-container">
-                <div class="project-images">
-                    <img class="active" src="/Images/ProjectImages/UKS/UkrainianSchoolWeb (1).png"
-                        alt="Ukrainian School Web 1" />
-                    <img src="/Images/ProjectImages/UKS/UkrainianSchoolWeb (2).png" alt="Ukrainian School Web 2" />
-                    <img src="/Images/ProjectImages/UKS/UkrainianSchoolWeb (3).png" alt="Ukrainian School Web 3" />
-                    <img src="/Images/ProjectImages/UKS/UkrainianSchoolWeb (4).png" alt="Ukrainian School Web 4" />
+            <a href="https://github.com/NoahIT/UkrainianSchoolWebProject">
+                <div class="project-img-container">
+                    <div class="project-images">
+                        <img class="active" src="/Images/ProjectImages/UKS/UkrainianSchoolWeb (1).png"
+                            alt="Ukrainian School Web 1" />
+                        <img src="/Images/ProjectImages/UKS/UkrainianSchoolWeb (2).png" alt="Ukrainian School Web 2" />
+                        <img src="/Images/ProjectImages/UKS/UkrainianSchoolWeb (3).png" alt="Ukrainian School Web 3" />
+                        <img src="/Images/ProjectImages/UKS/UkrainianSchoolWeb (4).png" alt="Ukrainian School Web 4" />
+                    </div>
+                    <div class="dots-container"></div>
                 </div>
-                <div class="dots-container"></div>
-            </div>
+            </a>
+
 
             <div class="project-info-container">
                 <a class="project-link" href="https://github.com/NoahIT/UkrainianSchoolWebProject">
@@ -87,18 +137,20 @@
                 <h1>Uniqum School</h1>
                 <div>
                     <h2 class="project-tag">Private ukranian school project</h2>
-                    <h3>Designed an intuitive and responsive front-end for a private school’s website, 
+                    <h3>Designed an intuitive and responsive front-end for a private school’s website,
                         highlighting curriculum details and enrollment features.</h3>
                 </div>
             </div>
         </div>
 
         <div class="project-container">
-            <div class="project-img-container">
-                <div class="project-images">
-                    <img class="active" src="/Images/Icons/exploreGithub.jpg" />
+            <a href="https://github.com/NoahIT">
+                <div class="project-img-container">
+                    <div class="project-images">
+                        <img class="active" src="/Images/Icons/exploreGithub.jpg" />
+                    </div>
                 </div>
-            </div>
+            </a>
 
             <div class="project-info-container">
                 <a class="project-link" href="https://github.com/NoahIT">
@@ -115,4 +167,21 @@
 </body>
 <script src="/Scripts/animatedBackground.js"></script>
 <script src="/Scripts/projectDotsIndicator.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    document.querySelectorAll('.animate-on-scroll').forEach(element => {
+        observer.observe(element);
+    });
+});
+</script>
 </html>

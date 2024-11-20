@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jersey+25&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Nothing+You+Could+Do&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jersey+25&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Nothing+You+Could+Do&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 body {
     display: flex;
@@ -22,9 +23,12 @@ body {
 .navbar a, footer{
     text-decoration: none;
     color: #d9d9d9;
-    font-family: "Nothing You Could Do", cursive;
-    font-weight: 600;
+    font-family: "Doto", sans-serif;
+    font-optical-sizing: auto;
     font-style: normal;
+    /* font-family: "Nothing You Could Do", cursive;
+    font-weight: 600;
+    font-style: normal; */
     font-size: 1.1rem;
     transition: 0.2s all ease-in-out;
 }
