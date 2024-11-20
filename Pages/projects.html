@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,16 @@
     <link rel="stylesheet" href="/Styles/site.css">
     <link rel="stylesheet" href="/Styles/index.css">
     <link rel="stylesheet" href="/Styles/Projects/projects.css">
+    <link rel="stylesheet" href="/Styles/Backgrounds/abstractBackground.css">
 </head>
+
 <body>
+    <div class="abstract-bg">
+        <div class="radial-overlay"></div>
+        <div class="radial-overlay-2"></div>
+    </div>
     <style>
-        body{
+        body {
             overflow: auto;
         }
     </style>
@@ -33,36 +40,79 @@
     </nav>
 
     <main class="main-content">
+
+        <h1 class="projects-heading">Real commercial projects I worked on</h1>
+
         <div class="project-container">
             <div class="project-img-container">
-                <img src="/Images/ProjectImages/EK/EuroKatilaiWeb (1).png"/>
-                <img src="/Images/ProjectImages/EK/EuroKatilaiWeb (2).png"/>
-                <img src="/Images/ProjectImages/EK/EuroKatilaiWeb (3).png"/>
-                <img src="/Images/ProjectImages/EK/EuroKatilaiWeb (4).png"/>
+                <div class="project-images">
+                    <img class="active" src="/Images/ProjectImages/EK/EuroKatilaiWeb (1).png"
+                        alt="Euro Katilai Web 1" />
+                    <img src="/Images/ProjectImages/EK/EuroKatilaiWeb (2).png" alt="Euro Katilai Web 2" />
+                    <img src="/Images/ProjectImages/EK/EuroKatilaiWeb (3).png" alt="Euro Katilai Web 3" />
+                    <img src="/Images/ProjectImages/EK/EuroKatilaiWeb (4).png" alt="Euro Katilai Web 4" />
+                </div>
+                <div class="dots-container"></div>
             </div>
+
             <div class="project-info-container">
-                <h1>Heading</h1>
+                <a class="project-link" href="https://github.com/NoahIT/E-CommerceShopProject">
+                    <img src="/Images/Icons/link_5062944.png">
+                </a>
+                <h1>EuroKatilai</h1>
                 <div>
-                    <h2>Info</h2>
-                    <h3>More Info...</h3>
+                    <h2 class="project-tag">First real commercial project</h2>
+                    <h3>Developed a responsive, user-friendly front-end for an e-commerce platform selling 
+                        heating equipment, focusing on seamless navigation and optimized performance.</h3>
                 </div>
             </div>
         </div>
+
+        <div class="project-container flex-reverse-display">
+            <div class="project-img-container">
+                <div class="project-images">
+                    <img class="active" src="/Images/ProjectImages/UKS/UkrainianSchoolWeb (1).png"
+                        alt="Ukrainian School Web 1" />
+                    <img src="/Images/ProjectImages/UKS/UkrainianSchoolWeb (2).png" alt="Ukrainian School Web 2" />
+                    <img src="/Images/ProjectImages/UKS/UkrainianSchoolWeb (3).png" alt="Ukrainian School Web 3" />
+                    <img src="/Images/ProjectImages/UKS/UkrainianSchoolWeb (4).png" alt="Ukrainian School Web 4" />
+                </div>
+                <div class="dots-container"></div>
+            </div>
+
+            <div class="project-info-container">
+                <a class="project-link" href="https://github.com/NoahIT/UkrainianSchoolWebProject">
+                    <img src="/Images/Icons/link_5062944.png">
+                </a>
+                <h1>Uniqum School</h1>
+                <div>
+                    <h2 class="project-tag">Private ukranian school project</h2>
+                    <h3>Designed an intuitive and responsive front-end for a private school’s website, 
+                        highlighting curriculum details and enrollment features.</h3>
+                </div>
+            </div>
+        </div>
+
         <div class="project-container">
             <div class="project-img-container">
-                <img src="/Images/ProjectImages/UKS/UkrainianSchoolWeb (1).png"/>
-                <img src="/Images/ProjectImages/UKS/UkrainianSchoolWeb (2).png"/>
-                <img src="/Images/ProjectImages/UKS/UkrainianSchoolWeb (3).png"/>
-                <img src="/Images/ProjectImages/UKS/UkrainianSchoolWeb (4).png"/>
+                <div class="project-images">
+                    <img class="active" src="/Images/Icons/exploreGithub.jpg" />
+                </div>
             </div>
+
             <div class="project-info-container">
-                <h1>Heading</h1>
+                <a class="project-link" href="https://github.com/NoahIT">
+                    <img src="/Images/Icons/link_5062944.png">
+                </a>
+                <h1>Github</h1>
                 <div>
-                    <h2>Info</h2>
-                    <h3>More Info...</h3>
+                    <h2 class="project-tag"></h2>
+                    <h3>Explore my other projects at github</h3>
                 </div>
             </div>
         </div>
     </main>
 </body>
+<script src="/Scripts/animatedBackground.js"></script>
+<script src="/Scripts/projectDotsIndicator.js"></script>
 </html>

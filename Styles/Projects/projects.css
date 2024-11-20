@@ -1,36 +1,147 @@
-.main-content {
-    max-width: 1200px;
-    margin: 0 auto;
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jersey+25&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Nothing+You+Could+Do&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.main-content, .project-img-container{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.projects-heading{
+    font-family: "Doto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 1.7rem;
+    color: aliceblue;
+    margin: 50px 0 0 0;
 }
 
 .project-container {
     display: flex;
-    flex-direction: column;
-    margin-bottom: 40px;
-    overflow: hidden;
-    border: 2px solid #666;
-    box-shadow: 0 4px 6px rgba(10, 10, 10, 0.1) inner;
-}
-
-.project-img-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 16px;
-    padding: 16px;
-    height: 400px;
+    justify-content: center;
+    align-items: center;    
     position: relative;
+    margin-bottom: 20px;
+    gap: 50px;
+}
+
+.project-images {
+    position: relative;
+    width: 600px;
+    height: 300px; /* Adjust as needed */
     overflow: hidden;
+    border-radius: 22px;
+    border: 2px solid #666;
+    transition: 0.2s all ease-in-out;
 }
 
-.project-img-container img {
+.project-images img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    border-radius: 4px;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    border-radius: 20px;
 }
 
-.project-info-container {
+.project-images img.active {
+    opacity: 1;
+}
+
+.dots-container {
+    position: absolute;
+    bottom: -30px;
+    display: flex;
+    gap: 10px;
+}
+
+.flex-reverse-display{
+    flex-direction: row-reverse !important;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: white;
+    
+}
+
+.dot::before{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    filter: blur(20px);
+    opacity: var(0.7);
+    transition: opacity 0.3s;
+    border-radius: inherit;
+}
+
+.project-info-container{
+    position: relative;
+    border: 1px solid #666;
+    border-radius: 20px;
+    width: 300px;
+    height: 250px;
+    padding: 23px;
+    color: #fff;
+    transition: 0.2s all ease-in-out;
+}
+
+.project-info-container h1, h2, h3{
+    font-family: "Doto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 1.6rem;
     color: aliceblue;
+}
+
+.project-tag{
+    position: absolute;
+    bottom: 0;
+    font-size: 1rem;
+    padding: 2px 10px;
+    border-top: 1px solid #666;
+    text-align: center;
+}
+
+.project-info-container h1{
+    text-align: right;
+}
+
+.project-info-container h3{
+    font-size: 1rem;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.project-link img{
+    position: absolute;
+    width: 40px;
+    height: auto;
+    top: 15px;
+    left: 15px;
+}
+
+.project-info-container:hover{
+    background-color: black;
+}
+
+.project-images:hover{
+    opacity: 0.5;
+    cursor: pointer;
 }
