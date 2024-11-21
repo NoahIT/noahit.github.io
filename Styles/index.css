@@ -49,6 +49,7 @@ html {
 .greetings-info h1 {
   font-size: 3rem;
   text-shadow: #FC0 1px 0 5px;
+  margin-top: -20px;
 }
 
 .greetings-info h2 {
