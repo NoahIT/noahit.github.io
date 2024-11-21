@@ -6,7 +6,7 @@
     height: 1300px;
     background: black;
     overflow: hidden;
-    filter: blur(10px);
+    /* filter: blur(10px); */
 }
 
 .radial-overlay {

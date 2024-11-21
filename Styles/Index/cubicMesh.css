@@ -1,0 +1,34 @@
+.cube-container {
+    width: 200px;
+    height: 200px;
+    background-color: transperent;
+    padding: 3px 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cube {
+    width: 100%;
+    height: 100%;
+    background-color: transperent;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    gap: 1px;
+    padding: 1px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.cube-section {
+    background-color: transperent;
+    border: 0.5px solid #1a1a1a;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    gap: 0px;
+    padding: 1px;
+}
+
+.cube-piece {
+    background: transperent;
+}
