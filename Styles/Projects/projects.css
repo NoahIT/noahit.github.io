@@ -10,6 +10,7 @@
     max-width: 1200px;
     padding: 0 20px;
     box-sizing: border-box;
+    gap: 10px;
 }
 
 .projects-heading {
@@ -18,7 +19,7 @@
     font-style: normal;
     font-size: 1.7rem;
     color: aliceblue;
-    margin: 50px 0 30px 0;
+    text-shadow: white 1px 0 5px;
     text-align: center;
     margin-top: 100px;
 }
@@ -209,15 +210,10 @@
         max-width: 100%;
     }
 
-    .dot::before {
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-    }
-
     .dot {
         margin-top: -300px;
+        width: 6px;
+        height: 6px;
     }
 }
 
@@ -239,6 +235,10 @@
     .project-images {
         width: 350px;
         height: 180px;
+    }
+
+    .project-info-container{
+        background-color: black;
     }
 }
 

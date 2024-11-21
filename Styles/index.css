@@ -13,6 +13,10 @@
   flex-wrap: wrap;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .card {
   position: relative;
   width: 200px;
@@ -60,6 +64,7 @@
 
 .greetings-icon-container {
   width: 300px;
+  position: relative;
 }
 
 .greetings-icon {
@@ -67,6 +72,15 @@
   width: 100%;
   display: block;
   transition: transform 0.1s ease-in-out;
+}
+
+.orientaiton-arrow{
+  position: absolute;
+  width: 50px;
+  left: 127px;
+  bottom: -70px;
+  display: none;
+  transition: 1s all ease-in-out;
 }
 
 .card::after {
@@ -158,5 +172,8 @@
   .greeting-container {
     flex-direction: column;
     justify-content: center;
+  }
+  .orientaiton-arrow{
+    display: block;
   }
 }
