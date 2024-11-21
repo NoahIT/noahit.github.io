@@ -7,6 +7,7 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="/Styles/site.css">
     <link rel="stylesheet" href="/Styles/Backgrounds/abstractBackground.css">
+    <link rel="stylesheet" href="/Styles/AboutMe/aboutme.css">
 </head>
 
 <body>
@@ -14,12 +15,6 @@
         <div class="radial-overlay"></div>
         <div class="radial-overlay-2"></div>
     </div>
-
-    <style>
-        body {
-            overflow: hidden;
-        }
-    </style>
     <nav class="navbar">
         <a class="navbar-brand" href="/">Nojus Raščius</a>
         <div class="hamburger">
@@ -43,9 +38,49 @@
     </nav>
 
     <main class="main-content">
-        In development
+        <h1 style=" text-shadow: white 1px 0 5px;">What I bring to the table?</h1>
+        <div class="about-container">
+            <img src="/Images/Icons/aboutMe/qr-code.png" style="width: 110px; top: -50px; left: -50px;" >
+            <h1 >Responsive Web Development</h1>
+            <h2 >I specialize in creating responsive and user-friendly interfaces using React or ASP.NET,
+                 ensuring seamless user experiences across devices.</h2>
+        </div>
+        <div class="about-container">
+            <img src="/Images/Icons/aboutMe/website.png" style="width: 75px; top: -40px; left: -40px;">
+            <h1>Clean and Accessible Code</h1>
+            <h2>My expertise includes building accessible web components with clean and 
+                maintainable HTML, CSS, and JavaScript.</h2>
+        </div>
+        <div class="about-container">
+            <img src="/Images/Icons/aboutMe/figma.png" style="width: 60px; top: -30px; left: -30px;">
+            <h1 >Design and Performance Optimization</h1>
+            <h2 >I focus on performance optimization and crafting pixel-perfect designs
+                 to bring creative visions to life.</h2>
+        </div>
+        <div class="about-container">
+            <img src="/Images/Icons/aboutMe/laboratory-equipment-flask.png" style="width: 100px; top: -50px; left: -50px;">
+            <h1 >Modern Development Practices</h1>
+            <h2 >With experience in modern front-end workflows, I integrate tools like
+                 Bootstarp and Git for efficient development.</h2>
+        </div>
+        <div class="about-container">
+            <img src="/Images/Icons/aboutMe/design-thinking.png" style="width: 70px; top: -35px; left: -40px;">
+            <h1 >Continuous Learning and Innovation</h1>
+            <h2 >Passionate about staying updated on front-end trends, I thrive on 
+                learning and implementing innovative technologies.</h2>
+        </div>
     </main>
 </body>
 <script src="/Scripts/animatedBackground.js"></script>
 <script src="/Scripts/ToggleNavBar.js"></script>
+<script>
+    window.addEventListener('load', () => {
+        const aboutContainers = document.querySelectorAll('.about-container');
+        aboutContainers.forEach((container, index) => {
+            setTimeout(() => {
+                container.classList.add('fade-in');
+            }, index * 500); // Delay each container by 500ms
+        });
+    });
+</script>
 </html>
