@@ -10,6 +10,7 @@
     gap: 50px;
     position: relative;
     z-index: 10;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -114,4 +115,20 @@
 .card:hover .card-heading {
     opacity: 1;
     transform: translateY(100%);
+}
+
+@media(max-width: 1024px){
+    .main-content{
+        width: auto;
+    }
+}
+
+@media(max-width: 715px){
+    .card-heading{
+        opacity: 1;
+    }
+
+    .card:not(:hover) {
+        filter: blur(0px);
+    }
 }
