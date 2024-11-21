@@ -2,66 +2,161 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jersey+25&family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Nothing+You+Could+Do&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 .main-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 100px 0;
-    width: 1200px;
-    gap: 50px;
-    position: relative;
-    z-index: 10;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0;
+  width: fit-content;
+  gap: 50px;
+  position: relative;
+  z-index: 10;
+  flex-wrap: wrap;
 }
 
 .card {
-    width: 200px;
-    min-width: fit-content;
-    height: 200px;
-    padding: 5px;
-    position: relative;
-    transition: 0.2s all ease-in-out;
-    object-fit: contain;
-    border-radius: 10px;
-    backdrop-filter: blur(4.9px);
-    -webkit-backdrop-filter: blur(4.9px);
-    outline: 2px solid #666;
+  position: relative;
+  width: 200px;
+  min-width: fit-content;
+  height: 200px;
+  padding: 5px;
+  position: relative;
+  transition: 0.2s all ease-in-out;
+  object-fit: contain;
+  border-radius: 10px;
+  backdrop-filter: blur(4.9px);
+  -webkit-backdrop-filter: blur(4.9px);
+  outline: 2px solid #666;
 }
 
-/* .card:hover {
-    display: flex;
-    filter: none;
-    cursor: pointer;
-} */
+.greeting-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: aliceblue;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 80px;
+  font-family: "Doto", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-align: center;
+}
+
+.greetings-info h1 {
+  font-size: 3rem;
+  text-shadow: #FC0 1px 0 5px;
+}
+
+.greetings-info h2 {
+  font-size: 1.2rem;
+  text-align: left;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  text-shadow: #FC0 1px 0 5px;
+}
+
+.greetings-icon-container {
+  width: 300px;
+}
+
+.greetings-icon {
+  border-radius: 50%;
+  width: 100%;
+  display: block;
+  transition: transform 0.1s ease-in-out;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+  opacity: 0.7;
+  animation: smoke-animation 4s infinite;
+}
+
+
+@keyframes smoke-animation {
+  0% {
+    transform: translateX(-50%) translateY(100%) scale(1);
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: translateX(-45%) translateY(-20%) scale(1.2);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(-100%) scale(1.5);
+    opacity: 0;
+  }
+}
 
 .card-img {
-    width: 40px;
-    position: absolute;
-    top: 5px;
-    left: 5px;
+  width: 40px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
 }
 
 .card-heading {
-    font-family: "Doto", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    text-align: center;
-    background-clip: text;
-    font-size: 1.6rem;
-    color: aliceblue;
-    padding: 5px 0;
-    max-width: 200px;
-    margin: 0;
-    opacity: 1;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    position: absolute; /*HERE!!!!!*/
-    width: 100%;
-    top: 30%;
-    left: 5%;
-    right: 0;
+  font-family: "Doto", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  text-align: center;
+  background-clip: text;
+  font-size: 1.6rem;
+  color: aliceblue;
+  padding: 5px 0;
+  max-width: 200px;
+  margin: 0;
+  opacity: 1;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  position: absolute;
+  width: 100%;
+  top: 36%;
+  left: 0;
+  right: 0;
 }
 
 @media(max-width: 1024px) {
-    .main-content {
-        width: auto;
-    }
+  
+  .main-content {
+    width: auto;
+  }
+
+  .greetings-info h2 {
+    margin-left: 10px;
+    font-size: 1rem;
+  }
+
+  .greetings-info h1 {
+    font-size: 2rem;
+  }
+
+  .more-greetings-info {
+    display: none;
+  }
+}
+
+@media(max-width: 375px) {
+  .greetings-info h1 {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+  }
+}
+
+@media(max-width: 525px) {
+  .greeting-container {
+    flex-direction: column;
+    justify-content: center;
+  }
 }

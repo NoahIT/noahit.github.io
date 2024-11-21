@@ -1,7 +1,14 @@
+function adjustBackgroundHeight() {
+    const bg = document.querySelector('.abstract-bg');
+    const bodyHeight = document.body.offsetHeight;
+    bg.style.height = `${bodyHeight}px`;
+}
+
 function createLines() {
     const bg = document.querySelector('.abstract-bg');
 
-    // Create solid lines
+    bg.innerHTML = '';
+
     for (let i = 0; i < 4; i++) {
         const line = document.createElement('div');
         line.className = 'line';
@@ -10,7 +17,6 @@ function createLines() {
         bg.appendChild(line);
     }
 
-    // Create dashed lines
     for (let i = 0; i < 3; i++) {
         const dashedLine = document.createElement('div');
         dashedLine.className = 'dashed-line';
@@ -20,4 +26,10 @@ function createLines() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', createLines);
+function initializeBackground() {
+    adjustBackgroundHeight();
+    createLines();
+}
+
+window.addEventListener('DOMContentLoaded', initializeBackground);
+window.addEventListener('resize', adjustBackgroundHeight);

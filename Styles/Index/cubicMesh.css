@@ -11,24 +11,36 @@
     height: 100%;
     background-color: transperent;
     display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(9, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     gap: 1px;
     padding: 1px;
     overflow: hidden;
     border-radius: 8px;
+    transition: 0.5s all ease;
 }
 
 .cube-section {
     background-color: transperent;
     border: 0.5px solid #1a1a1a;
     display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(9, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     gap: 0px;
     padding: 1px;
+    transition: 0.5s all ease;
+}
+
+.cube:hover  .cube-section{
+    border: 0.5px solid #262626;
+    background-image: linear-gradient(to bottom right, black, transparent); /* Gradient for the border */
+    background-origin: border-box; /* Positions the gradient on the border */
+    background-clip: padding-box, border-box; /* Ensures the gradient stays within the border */
+    box-shadow: 0 0 0 5px transparent; /* Prevents the gradient from filling the background */
+    transition: 0.5s all ease; /* Smooth transition effect */
 }
 
 .cube-piece {
     background: transperent;
 }
+  
